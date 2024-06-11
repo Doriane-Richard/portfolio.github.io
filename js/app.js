@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const appDiv = document.getElementById('pageAccueil');
   
-    fetch('/html/accueil.html')
+    fetch('html/accueil.html')
       .then(response => response.text())
       .then(data => {
         appDiv.innerHTML = data;
