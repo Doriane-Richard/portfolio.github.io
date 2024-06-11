@@ -2,8 +2,7 @@ function appelerPage(nomPageHtml, nomElementHtml) {
   fetch('html/' . nomPageHtml)
   .then(response => response.text())
   .then(data => {
-    const element = document.getElementById(nomElementHtml);
-    element.innerHTML = data;
+    nomElementHtml.innerHTML = data;
   })
   .catch(error => {
     console.error('Erreur lors du chargement du contenu:', error);
