@@ -1,4 +1,6 @@
 function appelerPage(nomPageHtml, nomElementHtml) {
+  console.log(`nom page : ${nomPageHtml} et nom élément : ${nomElementHtml}`);
+
   fetch(`html/${nomPageHtml}`)
   .then(response => response.text())
   .then(data => {
@@ -19,10 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // appelerPage("projetProfessionnel.html", pageProjetProfessionnel);
   // appelerPage("projetPersonnel.html", pageProjetPersonnel);
 
+  // const pageEnTete = document.getElementById('enTete');
+  // const pageBasDePage = document.getElementById('basDePage');
 
-  const pageEnTete = document.getElementById('enTete');
-  const pageBasDePage = document.getElementById('basDePage');
-
-  appelerPage("enTete.html", pageEnTete);
-  appelerPage("basDePage.html", pageBasDePage);
+  // appelerPage("enTete.html", pageEnTete);
+  // appelerPage("basDePage.html", pageBasDePage);
 });
