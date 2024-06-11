@@ -11,15 +11,15 @@ function appelerPage(nomPageHtml, nomElementHtml) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const pageContact = document.getElementById('pageContact');
-  const pageProjetProfessionnel = document.getElementById('pageProjetProfessionnel');
-  const pageProjetPersonnel = document.getElementById('pageProjetPersonnel');
+  // const pageContact = document.getElementById('pageContact');
+  // const pageProjetProfessionnel = document.getElementById('pageProjetProfessionnel');
+  // const pageProjetPersonnel = document.getElementById('pageProjetPersonnel');
 
-  appelerPage("contact.html", pageContact);
-  appelerPage("projetProfessionnel.html", pageProjetProfessionnel);
-  appelerPage("projetPersonnel.html", pageProjetPersonnel);
+  // appelerPage("contact.html", pageContact);
+  // appelerPage("projetProfessionnel.html", pageProjetProfessionnel);
+  // appelerPage("projetPersonnel.html", pageProjetPersonnel);
 
-  
+
   const pageEnTete = document.getElementById('enTete');
   const pageBasDePage = document.getElementById('basDePage');
 
