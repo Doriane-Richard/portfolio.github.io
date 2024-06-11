@@ -1,6 +1,4 @@
 function appelerPage(nomPageHtml, nomElementHtml) {
-  console.log(`voici le nom de la page : ${nomPageHtml}, et le nom de l'élément : ${nomElementHtml}`);
-
   fetch(`html/${nomPageHtml}`)
   .then(response => response.text())
   .then(data => {
@@ -22,3 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
   appelerPage("projetPersonnel.html", pageProjetPersonnel);
 });
 
+function envoyerEmail(nom, email, message) {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "doriane.richard.portfolio@gmail.com",
+    Password: "IlNeFautPasLireLeMDPDesAutres1234",
+    To: "doriane.richard.portfolio@gmail.com",
+    From: email,
+    Subject: `Nouveau message de ${nom} via le formulaire de contact`,
+    Body: message
+  }).then(
+    message => alert("Email envoyé avec succès!")
+  );
+}
