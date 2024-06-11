@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageProjetPersonnel = document.getElementById('pageProjetPersonnel');
 
   appelerPage("contact.html", pageContact);
-  appelerPage("pageProjetProfessionnel.html", pageProjetProfessionnel);
-  appelerPage("pageProjetPersonnel.html", pageProjetPersonnel);
+  appelerPage("projetProfessionnel.html", pageProjetProfessionnel);
+  appelerPage("projetPersonnel.html", pageProjetPersonnel);
 });
 
