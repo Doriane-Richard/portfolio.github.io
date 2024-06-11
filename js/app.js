@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function envoyerEmail(nom, email, message) {
+  console.log(`Le nom de l'expéditeur est : ${nom}, son adresse mail est : ${email} et son message est : ${message}`)
+
   Email.send({
     Host: "smtp.gmail.com",
     Username: "doriane.richard.portfolio@gmail.com",
