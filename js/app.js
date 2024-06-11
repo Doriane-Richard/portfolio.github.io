@@ -1,5 +1,5 @@
 function appelerPage(nomPageHtml, nomElementHtml) {
-  fetch('html/${nomPageHtml}')
+  fetch('html/' . nomPageHtml)
   .then(response => response.text())
   .then(data => {
     const element = document.getElementById(nomElementHtml);
