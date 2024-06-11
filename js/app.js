@@ -7,7 +7,7 @@ function appelerPage(nomPageHtml, nomElementHtml) {
   })
   .catch(error => {
     console.error('Erreur lors du chargement du contenu:', error);
-    appDiv.innerHTML = '<p>Une erreur s\'est produite lors du chargement du contenu.</p>';
+    nomElementHtml.innerHTML = '<p>Une erreur s\'est produite lors du chargement du contenu.</p>';
   });
 }
 
