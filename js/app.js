@@ -31,5 +31,7 @@ function envoyerEmail(nom, email, message) {
     Body: message
   }).then(
     message => alert("Email envoyé avec succès!")
-  );
+  ).catch(error => {
+    console.error('Erreur lors de l\' envoi du mail :', error);
+  });;
 }
