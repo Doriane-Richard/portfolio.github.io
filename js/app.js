@@ -18,4 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
   appelerPage("contact.html", pageContact);
   appelerPage("projetProfessionnel.html", pageProjetProfessionnel);
   appelerPage("projetPersonnel.html", pageProjetPersonnel);
+
+  
+  const pageEnTete = document.getElementById('enTete');
+  const pageBasDePage = document.getElementById('basDePage');
+
+  appelerPage("enTete.html", pageEnTete);
+  appelerPage("basDePage.html", pageBasDePage);
 });
