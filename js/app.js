@@ -1,7 +1,7 @@
 function appelerPage(nomPageHtml, nomElementHtml) {
   console.log(`nom page : ${nomPageHtml} et nom élément : ${nomElementHtml}`);
 
-  fetch(`html/${nomPageHtml}`)
+  fetch(`${nomPageHtml}`)
   .then(response => response.text())
   .then(data => {
     nomElementHtml.innerHTML = data;
