@@ -1,7 +1,6 @@
 body {
     background: #FFDAB9;
     color: #333333;
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -32,14 +31,12 @@ body {
 
 .presentation-box .image-container img {
     height: 250px;
-    width: 250px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #333333;
 }
 
 .presentation-box .biography-container p {
-    font-size: 16px;
+    font-size: 20px;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -54,7 +51,7 @@ body {
 }
 
 .content-box h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 20px;
     color: #333;
     text-align: center;
@@ -76,14 +73,14 @@ body {
 }
 
 .timeline span {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     display: block;
     margin-bottom: 5px;
 }
 
 .timeline p {
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
     margin: 0;
 }

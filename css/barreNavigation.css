@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Monaco';
 }
 
 .header {
@@ -26,7 +26,7 @@
 }
 
 .navbar a {
-    font-size: 18px;
+    font-size: 20px;
     color: #333333;
     text-decoration: none;
     font-weight: 500;
@@ -60,7 +60,7 @@
     }
 }
 
-@media screen and (width < 1280px) {
+@media screen and (width < 1000px) {
     .space-with-navbar {
         margin-top: 150px;
     }

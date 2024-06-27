@@ -1,7 +1,6 @@
 body {
     background: #FFDAB9;
     color: #333333;
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -52,12 +51,12 @@ h1 {
 }
 
 .project-info h2 {
-    font-size: 24px;
+    font-size: 33px;
     margin-bottom: 10px;
 }
 
 .project-info p {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -74,7 +73,7 @@ h1 {
 }
 
 .description-projet p {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
 }
 
@@ -87,7 +86,7 @@ h1 {
     border: none;
     border-top: 1px solid #d4d2d2;
     padding: 8px 16px;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     background-color: transparent;
     width: 100%;

@@ -1,7 +1,6 @@
 body {
     background: #FFDAB9;
     color: #333333;
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -18,14 +17,14 @@ body {
 
 .home-content h1 {
     position: relative;
-    font-size: 56px;
+    font-size: 62px;
     font-weight: 700;
     color: #333333;
 }
 
 .home-content h3 {
     position: relative;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     color: #333;
     line-height: 1.2;
@@ -33,7 +32,7 @@ body {
 
 .home-content p {
     position: relative;
-    font-size: 16px;
+    font-size: 20px;
     margin: 20px 0 40px;
     color: #333;
 }
@@ -125,9 +124,5 @@ body {
 
     .home {
         display: grid;
-    }
-
-    .space-with-navbar {
-        margin-top: 80px !important;
     }
 }
