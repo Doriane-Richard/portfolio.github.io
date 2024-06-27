@@ -87,3 +87,10 @@ body {
     color: #333;
     margin: 0;
 }
+
+/* Responsive styles */
+@media screen and (width < 1200px) {
+    .presentation-box, .section-container, .content-box {
+        width: 100%;
+    }
+}
