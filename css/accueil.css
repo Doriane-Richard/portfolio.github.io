@@ -10,7 +10,6 @@ body {
     display: flex;
     align-items: center !important;
     justify-content: center;
-    margin-top: 100px;
 }
     
 .home-content {

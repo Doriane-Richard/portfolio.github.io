@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     padding: 10px 10%;
-    background: #FFE4C4 !important;
+    background: #FFE4C4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
@@ -42,4 +42,8 @@
 .navbar a.active {
     background: #FFA07A;
     color: white;
+}
+
+.space-with-navbar {
+    margin-top: 100px;
 }
