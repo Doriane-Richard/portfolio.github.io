@@ -48,7 +48,7 @@ h1 {
 
 .project-info {
     padding: 20px;
-    width: 60%;
+    width: 100%;
 }
 
 .project-info h2 {
@@ -103,8 +103,18 @@ h1 {
 }
 
 /* Style responsive */
-@media screen and (width < 1500px) {
+@media screen and (width < 1200px) {
+    .project-list {
+        width: 100%;
+    }
+
     .space-with-navbar {
-        margin-top: 150px;
+        margin-top: 200px;
+    }
+}
+
+@media screen and (width < 800px) {
+    .project-item img {
+        display: none;
     }
 }

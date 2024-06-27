@@ -126,4 +126,8 @@ body {
     .home {
         display: grid;
     }
+
+    .space-with-navbar {
+        margin-top: 0px;
+    }
 }
