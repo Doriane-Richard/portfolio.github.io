@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'dyslexic-font';
+    src: url('../fonts/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MainLux-font';
+    src: url('../fonts/Mainlux-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Monaco';
+    font-family: 'MainLux-font';
 }
 
 .header {
@@ -31,8 +43,8 @@
     text-decoration: none;
     font-weight: 500;
     margin-left: 20px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    transition: color 0.2s ease;
     padding: 15px;  
     border-radius: 50% 0 50% 0;
     background: #FFE4C4;
