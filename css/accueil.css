@@ -100,19 +100,7 @@ body {
 }
 
 /* Style responsive */
-@media screen and (max-width: 1300px) {
-    .home-content #portrait {
-        width: 250px;
-    }
-    
-    .home-content img {
-        width: 250px;
-        border-radius: 50%;
-    }
-    
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (width < 1200px) {
     .home-content {
         display: flex;
         flex-direction: column;
