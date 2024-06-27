@@ -1,0 +1,103 @@
+body {
+    background: #FFDAB9;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.section-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project-list {
+    display: grid;
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.project-item {
+    background-color: #FFE4C4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-item .top-section {
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+.project-item img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+    width: 60%;
+}
+
+.project-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Styles pour la description détaillée des projets */
+.description-projet {
+    display: none;
+    margin: 20px;
+    max-height: 400px;
+    overflow-y: hidden;
+}
+
+.description-projet.scrolled {
+    overflow-y: auto;
+}
+
+.description-projet p {
+    font-size: 14px;
+    color: #666;
+}
+
+.show {
+    display: block;
+}
+
+.btn-en-savoir-plus {
+    color: #000000;
+    border: none;
+    border-top: 1px solid #d4d2d2;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-en-savoir-plus:hover {
+    background-color: #FFA07A;
+    color: white;
+}
