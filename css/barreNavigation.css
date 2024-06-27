@@ -49,12 +49,16 @@
 }
 
 /* Style responsive */
-@media screen and (width < 1300px) {
+@media screen and (width < 1400px) {
     .navbar a {
-        margin-bottom: 20px;
+        display: inline-block;
     }
 
     .space-with-navbar {
         margin-top: 150px;
+    }
+
+    .header {
+        padding: 0;
     }
 }
