@@ -45,9 +45,15 @@ body {
 
 .content-box {
     width: 45%;
-    max-width: 800px;
     margin: 10px;
+    overflow-y: hidden;
+    position: initial;
     height: 450px;
+}
+
+.scrolled {
+    max-height: 310px;
+    overflow-y: scroll;
 }
 
 .content-box h2 {

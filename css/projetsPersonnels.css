@@ -95,7 +95,7 @@ h1 {
 }
 
 /* Style responsive */
-@media screen and (width < 1200px) {
+@media screen and (width < 1300px) {
     #presentation-content {
         margin-left: 0;
         margin-right: 0;
