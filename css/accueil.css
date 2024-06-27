@@ -98,3 +98,28 @@ body {
         width: 0;
     }
 }
+
+/* Style responsive */
+@media screen and (max-width: 1300px) {
+    .home-content #portrait {
+        width: 250px;
+    }
+    
+    .home-content img {
+        width: 250px;
+        border-radius: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .home-content #portrait {
+        width: 150px;
+    }
+    
+    .home-content img {
+        width: 150px;
+        border-radius: 50%;
+    }
+    
+}
