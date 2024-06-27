@@ -107,10 +107,6 @@ h1 {
     .project-list {
         width: 100%;
     }
-
-    .space-with-navbar {
-        margin-top: 200px;
-    }
 }
 
 @media screen and (width < 800px) {

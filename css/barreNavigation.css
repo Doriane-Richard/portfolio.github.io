@@ -49,16 +49,25 @@
 }
 
 /* Style responsive */
-@media screen and (width < 1400px) {
+@media screen and (width < 1400px) {    
     .navbar a {
         display: inline-block;
-    }
-
-    .space-with-navbar {
-        margin-top: 150px;
+        margin-left: 0px;
     }
 
     .header {
         padding: 0;
+    }
+}
+
+@media screen and (width < 1280px) {
+    .space-with-navbar {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (width < 1025px) {
+    .navbar {
+        padding: 5px;
     }
 }
