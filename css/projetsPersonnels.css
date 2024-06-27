@@ -29,6 +29,10 @@ h1 {
     align-items: center;
 }
 
+.photos-container {
+    display: contents;
+}
+
 .photos {
     display: flex;
     flex-direction: column;
@@ -91,4 +95,55 @@ h1 {
     margin-right: -50px;
     margin-left: 20px;
     z-index: 2;
+}
+
+/* Style responsive */
+@media screen and (width < 1200px) {
+    #presentation-content {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .container {
+        justify-content: space-between;
+        padding: 40px 80px;
+        align-items: flex-start;
+    }
+    
+    .content {
+        padding: 50px 80px;
+    }
+
+    .photos-container {
+        display: block;
+    }
+    
+    .photos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .photo {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .photo3 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .photo3-right {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (width < 800px) {
+    .container, .content {
+        padding: 20px;
+    }
 }
