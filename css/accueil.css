@@ -112,14 +112,30 @@ body {
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .home-content #portrait {
         width: 150px;
+        margin-top: 20px;
     }
     
     .home-content img {
         width: 150px;
         border-radius: 50%;
     }
-    
+
+    .home-content h1,
+    .home-content h3,
+    .home-content p {
+        text-align: center;
+    }
+
+    .home {
+        display: grid;
+    }
 }
