@@ -92,7 +92,7 @@ h1 {
     background-color: transparent;
     width: 100%;
     text-align: left;
-    height: 5vh;
+    height: 40px;
     display: flex;
     justify-content: center;
 }
@@ -100,4 +100,11 @@ h1 {
 .btn-en-savoir-plus:hover {
     background-color: #FFA07A;
     color: white;
+}
+
+/* Style responsive */
+@media screen and (width < 1500px) {
+    .space-with-navbar {
+        margin-top: 150px;
+    }
 }

@@ -47,3 +47,14 @@
 .space-with-navbar {
     margin-top: 100px;
 }
+
+/* Style responsive */
+@media screen and (width < 1300px) {
+    .navbar a {
+        margin-bottom: 20px;
+    }
+
+    .space-with-navbar {
+        margin-top: 150px;
+    }
+}
