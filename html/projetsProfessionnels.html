@@ -3,6 +3,7 @@
     <title>Doriane Richard ~ Portfolio</title>
     <link rel="stylesheet" href="../css/barreNavigation.css">
     <link rel="stylesheet" href="../css/projetsProfessionnels.css">
+    <link rel="stylesheet" href="../css/piedDePage.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -77,9 +78,72 @@
                         </p>
                     </div>
                 </div>
-                <div class="description-projet">
+                <div class="description-projet scrolled">
                     <p>
+                        Dans un monde de plus en plus numérisé, l'accessibilité numérique est devenue un enjeu
+                        crucial pour garantir l'inclusion de tous les individus, quelles que soient leurs capacités
+                        physiques ou cognitives. Elle consiste à concevoir, développer et maintenir des technologies
+                        numériques de manière qu'elles soient utilisables y compris par les personnes en situation de
+                        handicap.<br><br>
+                        En effet, le projet d'accessibilité numérique auquel nous nous consacrons vise
+                        précisément à rendre notre application web accessible à un public aussi large et diversifié que
+                        possible. Il adopte une approche proactive et globale pour identifier, comprendre et résoudre
+                        les obstacles potentiels à l'utilisation de notre application par différents types d'utilisateurs. Cela
+                        inclut notamment les personnes ayant des troubles de la vision, de l'audition, ainsi que de
+                        l'incapacité motrice. Il s'agit d'un processus continu et itératif, où l'écoute des retours
+                        d'expérience des utilisateurs joue un rôle central dans l'évolution et l'amélioration constante de
+                        notre application.<br><br>
+                        En fin de compte, notre objectif est de créer une expérience utilisateur inclusive et
+                        équitable pour tous. Tout en veillant à ce que chaque individu, quels que soient ses besoins ou
+                        ses limitations, puisse accéder efficacement à notre application web. De plus, il faudra qu'il
+                        puisse interagir avec elle de manière significative et en tirer pleinement parti pour répondre à
+                        ses besoins et objectifs spécifiques. Ce projet m'a été confié, donc lors de sa mise en place, j'ai
+                        dû planifier le projet, ainsi que le suivre assidument.<br><br>
+                        Lors de mes recherches j'ai appris qu'il y avait deux principales normes : 
+                        la <a href="https://www.w3.org/WAI/standards-guidelines/wcag/fr">norme WCAG</a> qui est adopté à l'internantionnal
+                        et la <a href="https://accessibilite.numerique.gouv.fr">norme RGAA</a> qui est spécifique à la France.<br><br>
+                        Il est important de souligner qu'en matière d'accessibilité, ces normes proposent différents
+                        niveaux de conformité. Chacun vise à répondre aux besoins spécifiques des utilisateurs.
+                        Le niveau A, qui représente le premier niveau de conformité, inclut des critères de
+                        succès essentiels permettant à un large éventail d'utilisateurs d'accéder aux contenus.
+                        Les recommandations de ce niveau sont souvent relativement simples à mettre en œuvre
+                        et visent à assurer une accessibilité de base.
+                        Le niveau AA, plus exigeant, comprend des critères supplémentaires offrant une
+                        accessibilité accrue à des groupes d'utilisateurs plus spécifiques. Les recommandations
+                        de ce niveau sont plus spécialisées et peuvent nécessiter des efforts plus importants pour
+                        leur mise en place. Elles visent à améliorer significativement l'accessibilité pour un plus
+                        grand nombre d'utilisateurs.
+                        Le niveau AAA, le plus élevé en termes de conformité, inclut des critères de succès
+                        particulièrement avancés. Il peut parfois nécessiter des adaptations complexes. Ces
+                        critères visent à répondre aux besoins très spécifiques d'utilisateurs particuliers. Ils sont
+                        souvent réservés à des cas d'utilisation très spécifiques (comme l'ajout d'une version en
+                        langue des signes).<br>
+                        Pour vous permettre de mieux saisir les différences entre ces trois niveaux de conformité, voici
+                        quelques critères de succès de différents niveaux pour la recommandation qui concerne
+                        l'accessibilité des médias :<br>
+                        • Niveau A : tous les contenus audios préenregistrés sont sous-titrés à moins que l'audio
+                        ne soit la transcription d'un texte écrit.<br>
+                        • Niveau AA : toutes les vidéos ont une audiodescription.<br>
+                        • Niveau AAA : tous les contenus audios sont accompagnés d'une version en langue
+                        des signes.<br><br>
+                        En me concentrant sur trois paramètres clés du menu d'accessibilité, j'ai commencé par
+                        mettre en place la fonctionnalité de simplification de l'application. Cette option
+                        permet aux utilisateurs de choisir une interface simplifiée, conçue pour réduire la surcharge
+                        d'informations et améliorer la navigation pour les personnes malvoyantes.
+                        Un autre paramètre important est le zoom de l'application. Il offre aux utilisateurs la possibilité
+                        d'ajuster la taille du texte et des éléments de l'interface selon leurs besoins visuels. 
+                        Cette fonctionnalité garantit une expérience utilisateur optimale, même pour les personnes
+                        ayant des troubles de la vision.
+                        Et sur les thèmes de l'application, j'ai pris en compte différents types de
+                        daltonisme. J'ai ainsi proposé cinq thèmes distincts. Chacun est adapté à un type
+                        spécifique de déficience visuelle. Ces thèmes incluent un mode clair, un mode sombre, ainsi
+                        que des modes spécifiques pour la deutéranopie, la protanopie et la tritanopie. <br><br>
+                        Cela offre ainsi une personnalisation optimale de l'interface selon les besoins de l'utilisateur.
+                        Ce projet demande beaucoup de rigeur et de temps car notre application existante est complexe.
+                        Il faut refactoriser tout le css, s'assurer que les liens, les boutons, les images ai des descriptions appropriées.
+                        Et que notre contenu reste navigable en toutes circonstances.<br><br>
 
+                        Si vous voulez voir un aperçu, je vous suggère d'aller dans l'onglet "Paramètres d'accessibilité" si cela n'a pas déjà été fait.
                     </p>
                 </div>
                 <button class="btn-en-savoir-plus">En savoir plus</button>
@@ -190,3 +254,6 @@
     
     <script src="../js/app.js"></script>
 </body>
+<footer>
+    <p>© 2024 par Doriane Richard. Tous droits réservés.</p>
+</footer>
