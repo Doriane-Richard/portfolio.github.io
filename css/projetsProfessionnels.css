@@ -42,7 +42,7 @@ h1 {
 .project-item img {
     width: 300px;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .project-info {
@@ -101,11 +101,30 @@ h1 {
     color: white;
 }
 
-.videos {
-    width: 700px;
+.videos, .images-description-projet {
+    width: 700px !important;
     height: 400px;
 }
 
+#planInteractif {
+    width: auto !important;
+    height: 500px !important;
+}
+
+#image-inventaire-equipements {
+    width: 98% !important;
+    height: auto !important;
+}
+
+#image-intervenants {
+    width: 300px !important;
+    height: auto !important;
+}
+
+#image-statistiques-interventions, #image-diagnostiques-incidents {
+    width: 700px !important;
+    height: auto;
+}
 
 /* Style responsive */
 @media screen and (width < 1200px) {
@@ -115,7 +134,7 @@ h1 {
 }
 
 @media screen and (width < 800px) {
-    .project-item img {
+    .image-presentation-projet {
         display: none;
     }
 }

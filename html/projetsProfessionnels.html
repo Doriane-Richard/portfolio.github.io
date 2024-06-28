@@ -23,7 +23,7 @@
             <!-- Diana -->
             <div class="project-item">
                 <div class="top-section">
-                    <img src="../images/immeuble.jpg">
+                    <img class="image-presentation-projet" src="../images/immeuble.jpg">
                     <div class="project-info">
                         <h2>Diana</h2>
                         <p>
@@ -36,7 +36,28 @@
                 </div>
                 <div class="description-projet scrolled">
                     <p>
-
+                        Cette usine, avait en interne déjà développer un outil qui se nomme : Diana.
+                        C'est un tableau de bord analytique des lignes de production de MasterTech.
+                        Cependant, elle a aussi pour vocation de devenir l'application centrale pour les diverses services de l'entité.<br><br>
+                        Lors de mon alternance chez eux, je leur ai proposé de centralisé toutes les informations du parc informatique et automatique de l'usine.
+                        Car à ce moment là, tout était gérer à l'aide de fichier Excel pour beaucoup oublier ou non partagé. De plus,
+                        nous n'avions pas d'endroit pour enregistrer toutes les interventions que nous faisions. Nous n'avions pratiquement aucune
+                        traces de ce que nous faisions.<br><br>
+                        De ce fait j'ai créer un prototype que j'ai ensuite proposé aux services. Une fois la maquette validée, je me suis lancée dans le
+                        développement de ces différentes parties.<br><br>
+                        J'ai créer un plan interactif qui permet de situer les zones de l'usine et si on le souhaite, d'afficher l'emplacements des baies réseaux.<br>
+                        <img class="images-description-projet" id="planInteractif" src="../images/planInteractif.png"><br><br>
+                        Lorque l'on clique sur une zone, une page à droite du plan s'ouvre et indique les informations suivantes : le nom du secteur,
+                        le réferent et les pilotes de lignes, ainsi que les ordinateurs, imprimantes, écrans et automates présents sur la ligne.<br>
+                        <img class="images-description-projet" src="../images/bullePlanInteractif.PNG"><br><br>
+                        Une autre partie sert à avoir un inventaire de tous les équipements informatique et automatique :<br>
+                        <img class="images-description-projet" id="image-inventaire-equipements" src="../images/inventaireEquipements.png"><br><br>
+                        J'ai aussi mis en place une gestion des intervenants. Il est possible de supprimer ou ajouter un intervenant : <br>
+                        <img class="images-description-projet" id="image-intervenants" src="../images/listeIntervenants.png"><br><br>
+                        Possibilité de voir et filtrer toutes les interventions qui ont été enregistrées :<br>
+                        <img class="images-description-projet" id="image-statistiques-interventions" src="../images/statistiqueInterventions.png"><br><br>
+                        Et, il y a un tableau qui réuni tous les rapports de diagnostiques des incidents : <br>
+                        <img class="images-description-projet" id="image-diagnostiques-incidents" src="../images/tableauDiagnostiqueIncidents.png">
                     </p>
                 </div>
                 <button class="btn-en-savoir-plus">En savoir plus</button>
@@ -45,7 +66,7 @@
             <!-- Accessibilité Numérique -->
             <div class="project-item">
                 <div class="top-section">
-                    <img src="../images/accessibilite.jpg">
+                    <img class="image-presentation-projet" src="../images/accessibilite.jpg">
                     <div class="project-info">
                         <h2>Accessibilité Numérique</h2>
                         <p>
@@ -67,7 +88,7 @@
             <!-- Projet WebGl -->
             <div class="project-item">
                 <div class="top-section">
-                    <img src="../images/WebGl.png">
+                    <img class="image-presentation-projet" src="../images/WebGl.png">
                     <div class="project-info">
                         <h2>Projet WebGl</h2>
                         <p>
@@ -98,7 +119,7 @@
             <!-- La tour des héros -->
             <div class="project-item">
                 <div class="top-section">
-                    <img src="../images/TOH.png">
+                    <img class="image-presentation-projet" src="../images/TOH.png">
                     <div class="project-info">
                         <h2>La tour des héros</h2>
                         <p>
@@ -132,7 +153,7 @@
             <!-- Jeu du démineur -->
             <div class="project-item">
                 <div class="top-section">
-                    <img src="../images/jeuDemineurAccueil.png">
+                    <img class="image-presentation-projet" src="../images/jeuDemineurAccueil.png">
                     <div class="project-info">
                         <h2>Jeu du démineur</h2>
                         <p>
@@ -141,8 +162,26 @@
                         </p>
                     </div>
                 </div>
-                <div class="description-projet">
-                    <p></p>
+                <div class="description-projet scrolled">
+                    <p>
+                        Ce projet m'a permis de me familiariser avec le langage Flutter. 
+                        J'ai dû créer une application sous linux qui permet de jouer au démineur.<br><br>
+                        J'ai tout d'abord créer un menu permettant de rentrer son nom de joueur :<br>
+                        <img class="images-description-projet" src="../images/jeuDemineurAccueil.png"><br><br><br>
+                        <img class="images-description-projet" src="../images/jeuDemineurAccueilDifficultés.png"><br><br>
+                        Il est impossible de jouer si le nom du joueur n'est pas saisie ou bien qu'il est rempli de charactère vide.
+                        Une fois le pseudo écrit, il est possible de choisir le niveau de difficulté de la grille.<br>
+                        Ici, Richard va jouer sur une grille de 7x7 :<br>
+                        <img class="images-description-projet" src="../images/jeuDemineurAccueilLancementPartie.png"><br><br>
+                        Lorsqu'il joue, il peut savoir à l'aide du texte en dessous de sa grille s'il faut déminer ou si la partie est terminée.
+                        <img class="images-description-projet" src="../images/jeuDemineurEnCoursDePartie.png"><br><br>
+                        Une fois la partie finie : <br>
+                        <img class="images-description-projet" src="../images/jeuDemineurPartieTerminee.png"><br><br>
+                        Lorsqu'elle est terminée, toutes les cases non-découvertent se dévoilent.
+                        En cliquant sur "Voir mon score", nous arrivons sur un écran qui nous présente les statistiques de notre partie.
+                        Elle nous montre aussi le classement pour chaque niveau de difficulté avec une possibilité de suppression d'un score :<br>
+                        <img class="images-description-projet" src="../images/jeuDemineurEcranScore.png">
+                    </p>
                 </div>
                 <button class="btn-en-savoir-plus">En savoir plus</button>
             </div>
