@@ -21,6 +21,16 @@
     cursor: pointer;
 }
 
-#accessible-site {
-    display: none;
+.accessibility-settings {
+    margin-top: 150px;
+}
+
+body.light-theme {
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme {
+    background-color: black;
+    color: white;
 }
