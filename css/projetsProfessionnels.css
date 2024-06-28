@@ -40,9 +40,14 @@ h1 {
 }
 
 .project-item img {
-    width: 300px;
+    width: 350px;
     height: 100%;
+    border-radius: 5px;
     object-fit: fill;
+}
+
+.image-presentation-projet {
+    border-radius: 0px !important;
 }
 
 .project-info {
