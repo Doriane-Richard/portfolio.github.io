@@ -44,3 +44,38 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+
+const video = document.getElementById('myVideo');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const volumeControl = document.getElementById('volumeControl');
+const speedControl = document.getElementById('speedControl');
+
+// Play/Pause functionality
+playPauseBtn.addEventListener('click', () => {
+    if (video.paused || video.ended) {
+        video.play();
+        playPauseBtn.textContent = 'Pause';
+    } else {
+        video.pause();
+        playPauseBtn.textContent = 'Play';
+    }
+});
+
+// Volume control functionality
+volumeControl.addEventListener('input', () => {
+    video.volume = volumeControl.value;
+});
+
+// Playback speed control functionality
+speedControl.addEventListener('input', () => {
+    video.playbackRate = speedControl.value;
+});
+
+// Update button text based on video state
+video.addEventListener('play', () => {
+    playPauseBtn.textContent = 'Pause';
+});
+
+video.addEventListener('pause', () => {
+    playPauseBtn.textContent = 'Play';
+});

@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 36px;
     display: flex;
     justify-content: center;
     margin: 40px;
@@ -41,7 +41,7 @@ h1 {
 
 .project-item img {
     width: 300px;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -73,8 +73,8 @@ h1 {
 }
 
 .description-projet p {
-    font-size: 16px;
-    color: #666;
+    font-size: 20px;
+    color: #333;
 }
 
 .show {
@@ -86,7 +86,7 @@ h1 {
     border: none;
     border-top: 1px solid #d4d2d2;
     padding: 8px 16px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     background-color: transparent;
     width: 100%;
@@ -100,6 +100,12 @@ h1 {
     background-color: #FFA07A;
     color: white;
 }
+
+.videos {
+    width: 700px;
+    height: 400px;
+}
+
 
 /* Style responsive */
 @media screen and (width < 1200px) {
