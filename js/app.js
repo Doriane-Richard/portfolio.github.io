@@ -47,8 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Je suis sur l'accessibilité");
-
     const dyslexiaCheckbox = document.getElementById('dyslexia');
 
     // Charger les paramètres depuis le stockage local
