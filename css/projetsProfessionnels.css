@@ -1,6 +1,6 @@
 body {
-    background: #FFDAB9;
-    color: #333333;
+    background: var(--color-secondary);
+    color: var(--color-text-principal);
     margin: 0;
     padding: 0;
 }
@@ -25,8 +25,8 @@ h1 {
 }
 
 .project-item {
-    background-color: #FFE4C4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-primary);
+    box-shadow: 0 4px 8px var(--color-box-shadow);
     overflow: hidden;
     border-radius: 10px;
     display: flex;
@@ -79,7 +79,7 @@ h1 {
 
 .description-projet p {
     font-size: 16px;
-    color: #333;
+    color: var(--color-text-principal);
 }
 
 .show {
@@ -87,9 +87,9 @@ h1 {
 }
 
 .btn-en-savoir-plus {
-    color: #000000;
+    color: var(--color-text-principal);
     border: none;
-    border-top: 1px solid #d4d2d2;
+    border-top: 1px solid var(--color-secondary);
     padding: 8px 16px;
     font-size: 20px;
     cursor: pointer;
@@ -102,8 +102,8 @@ h1 {
 }
 
 .btn-en-savoir-plus:hover {
-    background-color: #FFA07A;
-    color: white;
+    background-color: var(--color-hover);
+    color: var(--color-text-complementary);
 }
 
 .videos, .images-description-projet {

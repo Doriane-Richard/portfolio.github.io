@@ -12,8 +12,8 @@
     left: 0;
     width: 100%;
     padding: 10px 10%;
-    background: #FFE4C4;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--color-primary);
+    box-shadow: 0 2px 4px var(--color-box-shadow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
 
 .navbar a {
     font-size: 20px;
-    color: #333333;
+    color: var(--color-text-principal);
     text-decoration: none;
     font-weight: 500;
     margin-left: 20px;
@@ -34,13 +34,13 @@
     transition: color 0.2s ease;
     padding: 15px;  
     border-radius: 50% 0 50% 0;
-    background: #FFE4C4;
+    background: var(--color-primary);
 }
 
 .navbar a:hover, 
 .navbar a.active {
-    background: #FFA07A;
-    color: white;
+    background: var(--color-hover);
+    color: var(--color-text-complementary);
 }
 
 .space-with-navbar {

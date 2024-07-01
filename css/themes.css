@@ -1,0 +1,52 @@
+body {
+    --color-primary: #FFE4C4;
+    --color-secondary: #FFDAB9;
+    --color-hover: #FFA07A;
+    --color-text-principal: #333333;
+    --color-text-light-principal: #666666;
+    --color-text-complementary: #FFFFFF;
+    --color-box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.theme-sombre {
+    --color-primary: #333333;
+    --color-secondary: #444444;
+    --color-hover: #555555;
+    --color-text-principal: #FFFFFF;
+    --color-text-light-principal: #BBBBBB;
+    --color-text-complementary: #E0E0E0;
+    --color-box-shadow: rgba(255, 255, 255, 0.2);
+}
+
+/* Thème pour les deuteranopes */
+body.theme-deuteranope {
+    --color-primary: #E6E6FA;
+    --color-secondary: #DDA0DD;
+    --color-hover: #9370DB;
+    --color-text-principal: #000000;
+    --color-text-light-principal: #666666; 
+    --color-text-complementary: #FFFFFF; 
+    --color-box-shadow: rgba(64, 64, 64, 0.1);
+}
+
+/* Thème pour les protanopes */
+body.theme-protanope {
+    --color-primary: #E6E6FA; 
+    --color-secondary: #4682B4;
+    --color-hover: #8A2BE2; 
+    --color-text-principal: #000000; 
+    --color-text-light-principal: #666666; 
+    --color-text-complementary: #FFFFFF; 
+    --color-box-shadow: rgba(64, 64, 64, 0.1);
+}
+
+/* Thème pour les tritanopes */
+body.theme-tritanope {
+    --color-primary: #F5F5F5; 
+    --color-secondary: #A52A2A;
+    --color-hover: #5F9EA0; 
+    --color-text-principal: #000000; 
+    --color-text-light-principal: #808080;
+    --color-text-complementary: #FFFFFF;
+    --color-box-shadow: rgba(64, 64, 64, 0.1);
+}
