@@ -17,7 +17,7 @@
         <a href="html/projetsProfessionnels.html">Projets professionnels</a>
         <a href="html/projetsPersonnels.html">Projets personnels</a>
         <a href="html/contact.html">Contact</a>
-        <a href="parametresAccessibilite.html">Paramètres d'accessibilité</a>
+        <a href="html/parametresAccessibilite.html">Paramètres d'accessibilité</a>
       </nav>
     </header>
     <br>
@@ -42,6 +42,33 @@
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const dyslexiaCheckbox = document.getElementById('dyslexia');
+  
+        // Charger les paramètres depuis le stockage local
+        const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) || {};
+  
+        console.log(settings);
+  
+        // Appliquer le mode dyslexie si nécessaire
+        if (settings.dyslexia) {
+          document.body.classList.add('dyslexia-mode');
+        }
+  
+        // Vérifier si la checkbox existe sur la page
+        if (dyslexiaCheckbox) {
+          dyslexiaCheckbox.checked = settings.dyslexia || false;
+  
+          // Sauvegarder les paramètres lorsque l'utilisateur les change
+          dyslexiaCheckbox.addEventListener('change', () => {
+            settings.dyslexia = dyslexiaCheckbox.checked;
+            localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+            document.body.classList.toggle('dyslexia-mode', dyslexiaCheckbox.checked);
+          });
+        }
+      });
+    </script>
   </body>
   <footer>
     <p>© 2024 par Doriane Richard. Tous droits réservés.</p>

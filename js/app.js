@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 // scripts.js
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log("Je suis sur l'accessibilité");
