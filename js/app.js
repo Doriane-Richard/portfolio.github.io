@@ -52,25 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Charger les paramètres depuis le stockage local
     const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) || {};
 
-    console.log(settings)
+    console.log(settings);
 
     // Appliquer le mode dyslexie si nécessaire
     if (settings.dyslexia) {
-        document.body.classList.add('dyslexia-mode');
+      document.body.classList.add('dyslexia-mode');
     }
 
     // Vérifier si la checkbox existe sur la page
     if (dyslexiaCheckbox) {
-        dyslexiaCheckbox.checked = settings.dyslexia || false;
+      dyslexiaCheckbox.checked = settings.dyslexia || false;
 
-        // Sauvegarder les paramètres lorsque l'utilisateur les change
-        dyslexiaCheckbox.addEventListener('change', () => {
-            settings.dyslexia = dyslexiaCheckbox.checked;
-            localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
-            document.body.classList.toggle('dyslexia-mode', dyslexiaCheckbox.checked);
-        });
+      // Sauvegarder les paramètres lorsque l'utilisateur les change
+      dyslexiaCheckbox.addEventListener('change', () => {
+        settings.dyslexia = dyslexiaCheckbox.checked;
+        localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+        document.body.classList.toggle('dyslexia-mode', dyslexiaCheckbox.checked);
+      });
     }
-});
+  });
 
 
 // scripts.js

@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'dyslexic-font';
+    src: url('../fonts/OpenDyslexicAlta-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.dyslexia-mode {
+    font-family: 'dyslexic-font', Arial, sans-serif;
+}
+
+/* Style responsive */
+@media screen and (width < 1700px) {
+    .header {
+        padding: 0;
+    }
+
+    .spice-with-navbar {
+        margin-top: 150px !important;
+    }
+}
+
+@media screen and (width < 1500px) {
+    .spice-with-navbar {
+        margin-top: 150px !important;
+    }
+}
+
+@media screen and (width < 1000px) {
+    .spice-with-navbar {
+        margin-top: 200px !important;
+    }
+
+    .image-presentation-projet {
+        display: none;
+    }
+}

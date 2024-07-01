@@ -5,17 +5,6 @@ body {
     padding: 0;
 }
 
-@font-face {
-    font-family: 'dyslexic-font';
-    src: url('../fonts/OpenDyslexicAlta-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body.dyslexia-mode {
-    font-family: 'dyslexic-font', Arial, sans-serif;
-}
-
 .home {
     display: flex;
     align-items: center !important;
