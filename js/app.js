@@ -47,30 +47,78 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const dyslexiaCheckbox = document.getElementById('dyslexia');
+  const dyslexiaCheckbox = document.getElementById('dyslexia');
+  const themeSelect = document.getElementById('theme');
+  const simplifyCheckbox = document.getElementById('simplify');
 
-    // Charger les paramètres depuis le stockage local
-    const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) || {};
+  // Charger les paramètres depuis le stockage local
+  const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) || {};
 
-    console.log(settings);
+  console.log(settings);
 
-    // Appliquer le mode dyslexie si nécessaire
-    if (settings.dyslexia) {
+  // Appliquer le mode dyslexie si nécessaire
+  if (settings.dyslexia) {
       document.body.classList.add('dyslexia-mode');
-    }
+  }
 
-    // Vérifier si la checkbox existe sur la page
-    if (dyslexiaCheckbox) {
+  // Appliquer le thème sélectionné
+  if (settings.theme) {
+      document.body.classList.add(settings.theme);
+  }
+
+  // Appliquer la simplification si nécessaire
+  if (settings.simplification) {
+      document.querySelectorAll('.normal-vision').forEach(element => element.classList.add('hide'));
+      document.querySelectorAll('.simplified-vision').forEach(element => element.classList.add('discover'));
+  }
+
+  // Vérifier si la checkbox et le select existent sur la page
+  if (dyslexiaCheckbox) {
       dyslexiaCheckbox.checked = settings.dyslexia || false;
 
       // Sauvegarder les paramètres lorsque l'utilisateur les change
       dyslexiaCheckbox.addEventListener('change', () => {
-        settings.dyslexia = dyslexiaCheckbox.checked;
-        localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
-        document.body.classList.toggle('dyslexia-mode', dyslexiaCheckbox.checked);
+          settings.dyslexia = dyslexiaCheckbox.checked;
+          localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+          document.body.classList.toggle('dyslexia-mode', dyslexiaCheckbox.checked);
       });
-    }
-  });
+  }
+
+  if (themeSelect) {
+      themeSelect.value = settings.theme || 'light';
+
+      // Sauvegarder le thème lorsque l'utilisateur le change
+      themeSelect.addEventListener('change', () => {
+          // Enlever l'ancien thème
+          document.body.classList.remove(settings.theme);
+          
+          // Ajouter le nouveau thème
+          settings.theme = themeSelect.value;
+          localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+          document.body.classList.add(settings.theme);
+      });
+  }
+
+  if (simplifyCheckbox) {
+      simplifyCheckbox.checked = settings.simplification || false;
+
+      // Gérer le changement de simplification
+      simplifyCheckbox.addEventListener('change', () => {
+          settings.simplification = simplifyCheckbox.checked;
+          localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+          
+          if (simplifyCheckbox.checked) {
+              document.querySelectorAll('.normal-vision').forEach(element => element.classList.add('hide'));
+              document.querySelectorAll('.simplified-vision').forEach(element => element.classList.add('discover'));
+          } else {
+              document.querySelectorAll('.normal-vision').forEach(element => element.classList.remove('hide'));
+              document.querySelectorAll('.simplified-vision').forEach(element => element.classList.remove('discover'));
+          }
+      });
+  }
+});
+
+
 
 
 // scripts.js
