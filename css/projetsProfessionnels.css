@@ -78,7 +78,7 @@ h1 {
 }
 
 .description-projet p {
-    font-size: 20px;
+    font-size: 16px;
     color: #333;
 }
 
@@ -142,4 +142,15 @@ h1 {
     .image-presentation-projet {
         display: none;
     }
+}
+
+@font-face {
+    font-family: 'dyslexic-font';
+    src: url('../fonts/OpenDyslexicAlta-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.dyslexia-mode {
+    font-family: 'dyslexic-font', Arial, sans-serif;
 }

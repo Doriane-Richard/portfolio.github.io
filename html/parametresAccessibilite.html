@@ -5,33 +5,6 @@
     <link rel="stylesheet" href="../css/piedDePage.css">
     <link rel="stylesheet" href="../css/parametresAccessibilite.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-            padding: 20px;
-        }
-
-        .dark-theme {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .light-theme {
-            background-color: #fff;
-            color: #333;
-        }
-
-        #theme-buttons {
-            margin-bottom: 10px;
-        }
-
-        button {
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <header class="header" id="test">
@@ -45,59 +18,27 @@
         </nav>
     </header>
     <br>
-    <div class="accessibility-settings" id="theme-buttons">
-        <button id="dark-theme-button">Thème Sombre</button>
-        <button id="light-theme-button">Thème Clair</button>
-    </div>
+    <body>
+        <div id="accessibility-settings">
+            <h2>Paramètres d'accessibilité</h2>
+            <form>
+                <label for="dyslexia">Mode Dyslexie:</label>
+                <input type="checkbox" id="dyslexia" name="dyslexia">
+                <br><br>
+    
+                <label for="simplification">Simplification de l'application:</label>
+                <input type="checkbox" id="simplification" name="simplification">
+                <br><br>
+    
+                <label for="theme">Thème de l'application:</label>
+                <select id="theme" name="theme">
+                    <option value="light">Clair</option>
+                    <option value="dark">Sombre</option>
+                    <option value="high-contrast">Haut contraste</option>
+                </select>
+            </form>
+        </div>
 
-    <script>
-        // JavaScript pour gérer les thèmes et l'interaction utilisateur
-        function generateSessionId() {
-            return 'session_' + Math.random().toString(36).substr(2, 9);
-        }
-
-        function saveTheme(theme) {
-            const sessionId = getSessionId();
-            sessionStorage.setItem(sessionId, theme);
-        }
-
-        function getTheme() {
-            const sessionId = getSessionId();
-            return sessionStorage.getItem(sessionId) || 'light';
-        }
-
-        function getSessionId() {
-            let sessionId = sessionStorage.getItem('sessionId');
-            if (!sessionId) {
-                sessionId = generateSessionId();
-                sessionStorage.setItem('sessionId', sessionId);
-            }
-            return sessionId;
-        }
-
-        function applyTheme(theme) {
-            if (theme === 'dark') {
-                document.body.classList.add('dark-theme');
-                document.body.classList.remove('light-theme');
-            } else {
-                document.body.classList.add('light-theme');
-                document.body.classList.remove('dark-theme');
-            }
-        }
-
-        function switchTheme(theme) {
-            saveTheme(theme);
-            applyTheme(theme);
-        }
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const savedTheme = getTheme();
-            applyTheme(savedTheme);
-
-            document.getElementById('dark-theme-button').addEventListener('click', () => switchTheme('dark'));
-            document.getElementById('light-theme-button').addEventListener('click', () => switchTheme('light'));
-        });
-    </script>
     <script src="../js/app.js"></script>
 </body>
 <footer>

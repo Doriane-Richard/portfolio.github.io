@@ -1,36 +1,45 @@
-
-/* Accessibilité */
-#normal-site{
-    display: block;
+@font-face {
+    font-family: 'dyslexic-font';
+    src: url('../fonts/OpenDyslexicAlta-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-
-.contenantParametreAccessibilite {
-    margin: 60px 0;
-    padding: 10px;
+/*/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.contenantParametreAccessibilite p {
-    font-size: 20px;
-}
-
-.contenantParametreAccessibilite button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.accessibility-settings {
+#accessibility-settings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 150px;
 }
 
-body.light-theme {
-    background-color: white;
-    color: black;
+h2 {
+    margin-top: 0;
 }
 
-body.dark-theme {
-    background-color: black;
-    color: white;
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="checkbox"],
+select {
+    margin-bottom: 16px;
+}
+
+body.dyslexia-mode {
+    font-family: 'dyslexic-font', Arial, sans-serif;
 }

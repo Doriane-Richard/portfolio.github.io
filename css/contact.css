@@ -87,3 +87,14 @@ body {
         padding: 10px;
     }
 }
+
+@font-face {
+    font-family: 'dyslexic-font';
+    src: url('../fonts/OpenDyslexicAlta-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.dyslexia-mode {
+    font-family: 'dyslexic-font', Arial, sans-serif;
+}

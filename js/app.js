@@ -45,61 +45,105 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// Gestion des cookies
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + d.toUTCString();
-    const cookieString = cname + "=" + cvalue + ";" + expires + ";path=/";
-    console.log(`Setting cookie: ${cookieString}`);
-    document.cookie = cookieString;
-    console.log(`Current cookies: ${document.cookie}`);
-}
 
-function getCookie(cname) {
-    const name = cname + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    console.log(`Decoded cookies: ${decodedCookie}`);
-    const ca = decodedCookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            console.log(`Found cookie: ${c}`);
-            return c.substring(name.length, c.length);
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Je suis sur l'accessibilité");
+
+    const dyslexiaCheckbox = document.getElementById('dyslexia');
+
+    // Charger les paramètres depuis le stockage local
+    const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) || {};
+
+    console.log(settings)
+
+    // Appliquer le mode dyslexie si nécessaire
+    if (settings.dyslexia) {
+        document.body.classList.add('dyslexia-mode');
     }
-    console.log('Cookie not found');
-    return "";
-}
 
-function applyTheme(theme) {
-    if (theme === 'dark') {
-        document.body.classList.add('dark-theme');
-        document.body.classList.remove('light-theme');
-    } else {
-        document.body.classList.add('light-theme');
-        document.body.classList.remove('dark-theme');
+    // Vérifier si la checkbox existe sur la page
+    if (dyslexiaCheckbox) {
+        dyslexiaCheckbox.checked = settings.dyslexia || false;
+
+        // Sauvegarder les paramètres lorsque l'utilisateur les change
+        dyslexiaCheckbox.addEventListener('change', () => {
+            settings.dyslexia = dyslexiaCheckbox.checked;
+            localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+            document.body.classList.toggle('dyslexia-mode', dyslexiaCheckbox.checked);
+        });
     }
-    console.log(`Applied theme: ${theme}`);
-}
-
-function switchTheme(theme) {
-    setCookie('theme', theme, 30); // Le cookie expire dans 30 jours
-    applyTheme(theme);
-}
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    let theme = getCookie('theme');
-    console.log(`Loaded theme: ${theme}`);
-    if (!theme) {
-        theme = 'light'; // Thème par défaut
-    }
-    applyTheme(theme);
-
-    // Event listeners pour les boutons de changement de thème
-    document.getElementById('dark-theme-button').addEventListener('click', () => switchTheme('dark'));
-    document.getElementById('light-theme-button').addEventListener('click', () => switchTheme('light'));
 });
+
+
+
+// scripts.js
+// document.addEventListener('DOMContentLoaded', () => {
+//     console.log("Je suis sur l'accessibilité");
+//     const dyslexiaCheckbox = document.getElementById('dyslexia');
+//     const simplificationCheckbox = document.getElementById('simplification');
+//     const themeSelect = document.getElementById('theme');
+
+//     // Charger les paramètres depuis le stockage local
+//     const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) || {};
+
+//     if (settings.dyslexia) {
+//         dyslexiaCheckbox.checked = true;
+//         document.body.classList.add('dyslexia-mode');
+//     } else {
+//         document.body.classList.remove('dyslexia-mode');
+//     }
+
+//     if (settings.simplification) {
+//         simplificationCheckbox.checked = true;
+//         document.body.classList.add('simplification-mode');
+//     }
+
+//     if (settings.theme) {
+//         themeSelect.value = settings.theme;
+//         document.body.classList.add(settings.theme);
+//     }
+
+//     // Sauvegarder les paramètres lorsque l'utilisateur les change
+//     dyslexiaCheckbox.addEventListener('change', () => {
+//         settings.dyslexia = dyslexiaCheckbox.checked;
+//         localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+//         document.body.classList.toggle('dyslexia-mode', dyslexiaCheckbox.checked);
+//     });
+
+//     simplificationCheckbox.addEventListener('change', () => {
+//         settings.simplification = simplificationCheckbox.checked;
+//         localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+//         document.body.classList.toggle('simplification-mode', simplificationCheckbox.checked);
+//     });
+
+//     themeSelect.addEventListener('change', () => {
+//         document.body.classList.remove(settings.theme);
+//         settings.theme = themeSelect.value;
+//         localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+//         document.body.classList.add(settings.theme);
+//     });
+// });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) 
+//     console.log(settings) || {};
+
+//     // Appliquer le mode dyslexie si nécessaire
+//     if (settings.dyslexia) {
+//         document.body.classList.add('dyslexia-mode');
+//     } else {
+//         document.body.classList.remove('dyslexia-mode');
+//     }
+// });
+// // Fonction pour charger la barre de navigation
+// function loadNavigation() {
+//     fetch('barreNavigation.html')
+//         .then(response => response.text())
+//         .then(data => {
+//             document.getElementById('navigation-bar').innerHTML = data;
+//         })
+//         .catch(error => console.error('Erreur lors du chargement de la barre de navigation:', error));
+// }
+
+// // Charger la barre de navigation quand la page est prête
+// document.addEventListener('DOMContentLoaded', loadNavigation);
