@@ -54,8 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Charger les paramètres depuis le stockage local
   const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) || {};
 
-  console.log(settings);
-
   // Appliquer le mode dyslexie si nécessaire
   if (settings.dyslexia) {
       document.body.classList.add('dyslexia-mode');
@@ -117,78 +115,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 });
-
-
-
-
-// scripts.js
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log("Je suis sur l'accessibilité");
-//     const dyslexiaCheckbox = document.getElementById('dyslexia');
-//     const simplificationCheckbox = document.getElementById('simplification');
-//     const themeSelect = document.getElementById('theme');
-
-//     // Charger les paramètres depuis le stockage local
-//     const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) || {};
-
-//     if (settings.dyslexia) {
-//         dyslexiaCheckbox.checked = true;
-//         document.body.classList.add('dyslexia-mode');
-//     } else {
-//         document.body.classList.remove('dyslexia-mode');
-//     }
-
-//     if (settings.simplification) {
-//         simplificationCheckbox.checked = true;
-//         document.body.classList.add('simplification-mode');
-//     }
-
-//     if (settings.theme) {
-//         themeSelect.value = settings.theme;
-//         document.body.classList.add(settings.theme);
-//     }
-
-//     // Sauvegarder les paramètres lorsque l'utilisateur les change
-//     dyslexiaCheckbox.addEventListener('change', () => {
-//         settings.dyslexia = dyslexiaCheckbox.checked;
-//         localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
-//         document.body.classList.toggle('dyslexia-mode', dyslexiaCheckbox.checked);
-//     });
-
-//     simplificationCheckbox.addEventListener('change', () => {
-//         settings.simplification = simplificationCheckbox.checked;
-//         localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
-//         document.body.classList.toggle('simplification-mode', simplificationCheckbox.checked);
-//     });
-
-//     themeSelect.addEventListener('change', () => {
-//         document.body.classList.remove(settings.theme);
-//         settings.theme = themeSelect.value;
-//         localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
-//         document.body.classList.add(settings.theme);
-//     });
-// });
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const settings = JSON.parse(localStorage.getItem('accessibilitySettings')) 
-//     console.log(settings) || {};
-
-//     // Appliquer le mode dyslexie si nécessaire
-//     if (settings.dyslexia) {
-//         document.body.classList.add('dyslexia-mode');
-//     } else {
-//         document.body.classList.remove('dyslexia-mode');
-//     }
-// });
-// // Fonction pour charger la barre de navigation
-// function loadNavigation() {
-//     fetch('barreNavigation.html')
-//         .then(response => response.text())
-//         .then(data => {
-//             document.getElementById('navigation-bar').innerHTML = data;
-//         })
-//         .catch(error => console.error('Erreur lors du chargement de la barre de navigation:', error));
-// }
-
-// // Charger la barre de navigation quand la page est prête
-// document.addEventListener('DOMContentLoaded', loadNavigation);
