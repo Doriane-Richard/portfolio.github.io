@@ -26,6 +26,12 @@ body.dyslexia-mode {
     }
 }
 
+@media screen and (width < 1100px) {
+    .spice-with-navbar {
+        margin-top: 150px !important;
+    }
+}
+
 @media screen and (width < 1000px) {
     .spice-with-navbar {
         margin-top: 200px !important;
