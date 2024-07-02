@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (settings.simplification) {
       document.querySelectorAll('.normal-vision').forEach(element => element.classList.add('hide'));
       document.querySelectorAll('.simplified-vision').forEach(element => element.classList.add('discover'));
+      document.querySelectorAll('.simplified-element-content').forEach(element => element.classList.add('simplified-element-content-active'));
   }
 
   // Vérifier si la checkbox et le select existent sur la page
@@ -108,9 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
           if (simplifyCheckbox.checked) {
               document.querySelectorAll('.normal-vision').forEach(element => element.classList.add('hide'));
               document.querySelectorAll('.simplified-vision').forEach(element => element.classList.add('discover'));
+              document.querySelectorAll('.simplified-element-content').forEach(element => element.classList.add('simplified-element-content-active'));
           } else {
               document.querySelectorAll('.normal-vision').forEach(element => element.classList.remove('hide'));
               document.querySelectorAll('.simplified-vision').forEach(element => element.classList.remove('discover'));
+              document.querySelectorAll('.simplified-element-content').forEach(element => element.classList.remove('simplified-element-content-active'));
           }
       });
   }
